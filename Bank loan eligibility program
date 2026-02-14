@@ -1,0 +1,13 @@
+from functools import reduce
+import pandas as pd
+
+data = [
+    {"Name": "Amit", "Income": 50000, "Age": 30, "Credit_Score": 750},
+    {"Name": "Neha", "Income": 30000, "Age": 22, "Credit_Score": 680},
+    {"Name": "Raj", "Income": 80000, "Age": 45, "Credit_Score": 820},
+    {"Name": "Priya", "Income": 25000, "Age": 28, "Credit_Score": 600}
+]
+
+income_in_lakhs = list(map(lambda x: x["Income"] / 100000, data))
+
+eligible_applicants = list(filter
