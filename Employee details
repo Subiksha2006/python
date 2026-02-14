@@ -1,0 +1,21 @@
+employees = {
+    101: {"Name": "Amit", "Age": 30, "Department": "HR", "Salary": 40000},
+    102: {"Name": "Neha", "Age": 28, "Department": "IT", "Salary": 55000},
+    103: {"Name": "Raj", "Age": 35, "Department": "Finance", "Salary": 60000}
+}
+
+print("Employee Details:")
+for emp_id, details in employees.items():
+    print("Employee ID:", emp_id)
+    for key, value in details.items():
+        print(key + ":", value)
+    print()
+
+search_id = int(input("Enter Employee ID to search: "))
+
+if search_id in employees:
+    print("Employee Found:")
+    for key, value in employees[search_id].items():
+        print(key + ":", value)
+else:
+    print("Employee not found")
