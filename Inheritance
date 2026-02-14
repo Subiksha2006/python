@@ -1,0 +1,26 @@
+class Person:
+    def __init__(self, details):
+        self.name = details[0]
+        self.age = details[1]
+
+    def display_person(self):
+        print("Name:", self.name)
+        print("Age:", self.age)
+
+
+class Employee(Person):
+    def __init__(self, details):
+        super().__init__(details)
+        self.emp_id = details[2]
+        self.salary = details[3]
+
+    def display_employee(self):
+        self.display_person()
+        print("Employee ID:", self.emp_id)
+        print("Salary:", self.salary)
+
+
+data = ("Amit", 30, 101, 50000)
+
+emp = Employee(data)
+emp.display_employee()
