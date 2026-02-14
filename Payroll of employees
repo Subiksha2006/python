@@ -1,0 +1,19 @@
+name = input("Enter Employee Name: ")
+hours = float(input("Enter Total Working Hours: "))
+rate = float(input("Enter Pay Rate per Hour: "))
+
+if hours <= 40:
+    pay = hours * rate
+    print("\nRegular Pay")
+    print("Employee Name:", name)
+    print("Total Pay:", pay)
+else:
+    overtime_hours = hours - 40
+    regular_pay = 40 * rate
+    overtime_pay = overtime_hours * rate * 1.5
+    pay = regular_pay + overtime_pay
+
+    print("\nOvertime Pay")
+    print("Employee Name:", name)
+    print("Overtime Hours:", overtime_hours)
+    print("Total Pay:", pay)
